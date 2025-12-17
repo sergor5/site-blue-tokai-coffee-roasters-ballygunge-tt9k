@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Visit Blue Tokai Coffee Roasters in Ballygunge, Kolkata. Rated 4.5/5. Enjoy India's finest specialty coffee, artisan bakery, and a relaxing atmosphere at Garcha.">
+  <meta name="keywords" content="Blue Tokai Ballygunge, Specialty Coffee Kolkata, Cafe in Ballygunge, Best Coffee Shop Kolkata, Blue Tokai Menu, Roastery Kolkata">
+  <title>Blue Tokai Coffee Roasters | Ballygunge - Premium Cafe in Kolkata</title>
+  <style>
+:root {
+    --primary: #1e3a8a;
+    --secondary: #0f172a;
+    --accent: #d97706;
+    --light: #f8fafc;
+    --dark: #1e293b;
+    --text: #475569;
+    --white: #ffffff;
+    --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text);
+    line-height: 1.6;
+    background-color: var(--white);
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--secondary);
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Utilities */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bg-light {
+    background-color: var(--light);
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.section-subtitle {
+    color: var(--text);
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: #b45309;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+}
+
+.btn-outline {
+    border: 2px solid var(--white);
+    color: var(--white);
+    margin-left: 10px;
+}
+
+.btn-outline:hover {
+    background-color: var(--white);
+    color: var(--primary);
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    backdrop-filter: blur(10px);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    color: var(--primary);
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links a {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--secondary);
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.btn-nav {
+    padding: 8px 20px;
+    background-color: var(--primary);
+    color: var(--white) !important;
+    border-radius: 4px;
+}
+
+.btn-nav:hover {
+    background-color: var(--secondary);
+}
+
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--secondary);
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    min-height: 600px;
+    background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.5));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    max-width: 600px;
+}
+
+/* Info Banner */
+.info-banner {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 20px 0;
+}
+
+.info-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* About Section */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-image img {
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.feature-list {
+    margin-top: 20px;
+}
+
+.feature-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.feature-list i {
+    color: var(--accent);
+}
+
+/* Menu Grid */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.menu-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img {
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.menu-card:hover .card-img img {
+    transform: scale(1.1);
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.card-body h3 {
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+/* Contact Section */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.contact-info {
+    padding: 40px;
+    background-color: var(--light);
+}
+
+.contact-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.contact-item i {
+    font-size: 1.2rem;
+    color: var(--accent);
+    margin-top: 5px;
+}
+
+.contact-item h4 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    font-family: var(--font-body);
+}
+
+.contact-map iframe {
+    height: 100%;
+    min-height: 400px;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark);
+    color: #94a3b8;
+    padding: 50px 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-brand h3 {
+    color: var(--white);
+    margin-bottom: 5px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #334155;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+}
+
+.footer-social a:hover {
+    background-color: var(--accent);
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--white);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: 0.3s ease-in-out;
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+.mobile-link {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 15px 0;
+    font-family: var(--font-heading);
+}
+
+/* Animations */
+.animate-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .mobile-toggle {
+        display: block;
+    }
+    
+    .about-grid, .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .info-grid {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
+  </style>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Visit Blue Tokai Coffee Roasters in Ballygunge, Kolkata. Rated 4.5/5. Experience India's finest specialty coffee, fresh bakery items, and a cozy ambiance at Palit St, Garcha.">
+    <title>Blue Tokai Coffee Roasters | Ballygunge - Specialty Coffee in Kolkata</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Blue Tokai <span>Ballygunge</span></a>
+            <div class="nav-links">
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#menu">Menu</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact" class="btn-nav">Visit Us</a>
+            </div>
+            <button class="mobile-toggle" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <a href="#hero" class="mobile-link">Home</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#menu" class="mobile-link">Menu</a>
+        <a href="#reviews" class="mobile-link">Reviews</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="animate-up">India's Finest Specialty Coffee <br>Now in Ballygunge</h1>
+            <p class="animate-up delay-1">Roasted fresh, brewed with precision, and served in the heart of Kolkata.</p>
+            <div class="hero-btns animate-up delay-2">
+                <a href="#contact" class="btn btn-primary">Find Us</a>
+                <a href="tel:07042979995" class="btn btn-outline">Call Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Info Banner -->
+    <section class="info-banner">
+        <div class="container info-grid">
+            <div class="info-item">
+                <i class="fas fa-star"></i>
+                <span>4.5/5 Rating (520+ Reviews)</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Palit St, Garcha, Kolkata</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-clock"></i>
+                <span>Open Daily: 8:00 AM - 10:00 PM</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container about-grid">
+            <div class="about-image reveal">
+                <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cozy Coffee Shop Interior">
+            </div>
+            <div class="about-text reveal">
+                <h2 class="section-title">More Than Just Coffee</h2>
+                <p>Welcome to <strong>Blue Tokai Coffee Roasters | Ballygunge</strong>. Located in the vibrant Garcha neighborhood, we bring the farm-to-cup experience directly to Kolkata.</p>
+                <p>Our beans are sourced directly from India's best coffee estates, roasted with care, and brewed to perfection by our expert baristas. Whether you need a quiet corner to work or a lively spot to catch up with friends, our ground and 1st-floor seating offers the perfect ambiance.</p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check-circle"></i> 100% Arabica Specialty Coffee</li>
+                    <li><i class="fas fa-check-circle"></i> Free High-Speed Wi-Fi</li>
+                    <li><i class="fas fa-check-circle"></i> Freshly Baked Goods</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Highlights -->
+    <section id="menu" class="section bg-light">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 class="section-title">Our Offerings</h2>
+                <p class="section-subtitle">Curated flavors for the discerning palate</p>
+            </div>
+            <div class="menu-grid">
+                <!-- Card 1 -->
+                <div class="menu-card reveal">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pour Over Coffee">
+                    </div>
+                    <div class="card-body">
+                        <h3>Specialty Brews</h3>
+                        <p>From Pour-overs to AeroPress, experience coffee the way it was meant to be tasted.</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="menu-card reveal delay-1">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Croissants and Bakery">
+                    </div>
+                    <div class="card-body">
+                        <h3>Artisan Bakery</h3>
+                        <p>Fresh croissants, sourdough toast, and delicious cakes baked daily.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="menu-card reveal delay-2">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cafe Ambience">
+                    </div>
+                    <div class="card-body">
+                        <h3>All-Day Dining</h3>
+                        <p>Hearty breakfast options, healthy salads, and gourmet sandwiches.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/Location Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="contact-wrapper reveal">
+                <div class="contact-info">
+                    <h2 class="section-title">Visit Us</h2>
+                    <p class="mb-4">Drop by for a cup of excellence.</p>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-pin"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>Ground & 1st Floor, No 11, Palit St,<br>Garcha, Ballygunge, Kolkata,<br>West Bengal 700019</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p><a href="tel:07042979995">070429 79995</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>getcoffee@bluetokai.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.976778917834!2d88.3582!3d22.5225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027786b7294867%3A0xe5449757659d81d4!2sBlue%20Tokai%20Coffee%20Roasters%20%7C%20Ballygunge!5e0!3m2!1sen!2sin!4v1715694200000!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Blue Tokai | Ballygunge</h3>
+                    <p>Brewing happiness in Kolkata.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Blue Tokai Coffee Roasters. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // Mobile Menu Toggle
+    const mobileBtn = document.querySelector('.mobile-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    const icon = mobileBtn.querySelector('i');
+
+    mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+        // Toggle Icon
+        if (mobileMenu.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
+
+    // Close mobile menu on link click
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        });
+    });
+
+    // Smooth Scrolling for all internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                // Account for fixed header height
+                const headerOffset = 80;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+
+    // Scroll Reveal Animation using Intersection Observer
+    const revealElements = document.querySelectorAll('.reveal');
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        root: null,
+        threshold: 0.15,
+        rootMargin: "0px"
+    });
+
+    revealElements.forEach(el => {
+        revealObserver.observe(el);
+    });
+
+    // Navbar Scroll Effect
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.style.boxShadow = "0 4px 6px -1px rgba(0, 0, 0, 0.1)";
+            navbar.style.padding = "15px 0";
+        } else {
+            navbar.style.boxShadow = "none";
+            navbar.style.padding = "20px 0";
+        }
+    });
+});
+  </script>
+</body>
+</html>
